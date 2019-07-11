@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="container">
+        
+        <div class="input-part">
+                <input id="input" type="text" placeholder="ingredient">
+                <button>Search!</button>
+        </div>
+        <div class="players"></div> 
+    </div>
+
+    <script id="first-template" type="text/x-handlebars-template">
+        {{#each data}}
+            <div id="player">
+                <div>{{firstName}} {{lastName}}</div>
+                <div>{{jersey}}</div>
+                <div><img id="image" src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" onerror="this.src='https://s.yimg.com/ny/api/res/1.2/umHJJQAzal.Ar.laG6bGWQ--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/b427d19dd6238628dc7fa8acc2c212d3'"></div>
+                <div>{{pos}}</div>
+                
+            </div>
+        {{/each}}
+    </script>
+
+
+
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="handlebars/dist/handlebars.js"></script>
+    <script src="renderer.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
