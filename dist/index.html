@@ -20,10 +20,14 @@
 
     <script id="first-template" type="text/x-handlebars-template">
         {{#each data}}
-            <div id="Recipe">
-                <div>{{title}}</div>
-                <div><img id="image" src="{{thumbnail}}"></div>
-                <div>{{ingredients}}</div>
+            <div class="Recipe">
+                <div class="title"><a href="{{href}}">{{title}}</a></div>
+                <div><img class="image" src="{{thumbnail}}"></div>
+                <ul>
+                {{#each ingredients}}
+                <li>{{this}}</li>
+                {{/each}}
+                </ul>
             </div>
         {{/each}}
     </script>

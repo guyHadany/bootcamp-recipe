@@ -5,6 +5,12 @@ $("button").on("click", function(){
     $("#input").val("")
 })
 
+$(".recepies").on("click", ".image", function(){
+    // let firstIngridient = this.closest("div").find("li")
+    console.log(this)
+})
+
+
 
 const getIngridient = function(){
     let ingridient = $("#input").val()
