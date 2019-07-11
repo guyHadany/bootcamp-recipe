@@ -6,8 +6,8 @@ $("button").on("click", function(){
 })
 
 $(".recepies").on("click", ".image", function(){
-    // let firstIngridient = this.closest("div").find("li")
-    console.log(this)
+    // let firstIngridient = $(this).closest("div").find("li")
+    console.log(this.closest(".Recipe"))
 })
 
 
