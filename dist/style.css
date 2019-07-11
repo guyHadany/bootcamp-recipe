@@ -31,7 +31,7 @@ body{
     border-radius: 4px;
 }
 
-.players{
+.recepies{
     grid-area: p;
     width: 100%;
     height: 110%;
@@ -41,7 +41,7 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-#player{
+#Recipe{
     border-radius: 10px;
     background-color: orange;
     box-shadow: 10px 10px 5px -2px rgba(0,0,0,0.75);

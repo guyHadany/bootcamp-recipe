@@ -15,17 +15,15 @@
                 <input id="input" type="text" placeholder="ingredient">
                 <button>Search!</button>
         </div>
-        <div class="players"></div> 
+        <div class="recepies"></div> 
     </div>
 
     <script id="first-template" type="text/x-handlebars-template">
         {{#each data}}
-            <div id="player">
-                <div>{{firstName}} {{lastName}}</div>
-                <div>{{jersey}}</div>
-                <div><img id="image" src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" onerror="this.src='https://s.yimg.com/ny/api/res/1.2/umHJJQAzal.Ar.laG6bGWQ--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/b427d19dd6238628dc7fa8acc2c212d3'"></div>
-                <div>{{pos}}</div>
-                
+            <div id="Recipe">
+                <div>{{title}}</div>
+                <div><img id="image" src="{{thumbnail}}"></div>
+                <div>{{ingredients}}</div>
             </div>
         {{/each}}
     </script>

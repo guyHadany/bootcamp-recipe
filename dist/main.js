@@ -1,4 +1,4 @@
-// const renderer = new Renderer
+const renderer = new Renderer
 
 $("button").on("click", function(){
     getIngridient()
@@ -9,6 +9,6 @@ $("button").on("click", function(){
 const getIngridient = function(){
     let ingridient = $("#input").val()
     $.get(`http://localhost:8080/recipes/${ingridient}`, function(response){
-        console.log(response)
+        renderer.renderIngredients(response)
     })
 }
